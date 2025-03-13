@@ -21,8 +21,7 @@ sgp read_sgp40(sht s) {
   uint16_t raw;
 
   raw = sgp40.measureRaw();
-  int32_t voc_index =
-      sgp40.measureVocIndex(s.temp.temperature, s.rel_hum.relative_humidity);
+  int32_t voc_index = sgp40.measureVocIndex(s.temp, s.rel_hum);
 
   return {raw, voc_index};
 }

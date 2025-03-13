@@ -7,8 +7,8 @@
 #include <Wire.h>
 
 typedef struct _sht {
-  sensors_event_t temp;
-  sensors_event_t rel_hum;
+  float temp;
+  float rel_hum;
 } sht;
 
 void init_sht45(void);

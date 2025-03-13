@@ -73,8 +73,8 @@ sht read_sht45(void) {
   Serial.print("ms");
 
   sht ret = {
-      .temp = temp,
-      .rel_hum = humidity,
+      .temp = temp.temperature,
+      .rel_hum = humidity.relative_humidity,
   };
   return ret;
 }

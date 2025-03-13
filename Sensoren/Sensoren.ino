@@ -28,10 +28,10 @@ void setup() {
 void loop() {
   sht s = read_sht45();
   Serial.print("Temperature: ");
-  Serial.print(s.temp.temperature);
+  Serial.print(s.temp);
   Serial.println(" degrees C");
   Serial.print("Humidity: ");
-  Serial.print(s.rel_hum.relative_humidity);
+  Serial.print(s.rel_hum);
   Serial.println("% rH");
 
   sgp sg = read_sgp40(s);
